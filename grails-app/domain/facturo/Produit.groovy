@@ -11,6 +11,7 @@ class Produit {
     BigDecimal prixUnitaireHt
     BigDecimal tauxTva = 20.0
     Integer stock = 0
+    Fournisseur fournisseur //pas de belongsTo, ça supprimerait en cascade (voir doc section 3)
 
     static constraints = {
         reference      blank: false, maxSize: 30, unique: true
@@ -18,6 +19,7 @@ class Produit {
         prixUnitaireHt min: 0.0, scale: 2
         tauxTva        min: 0.0, max: 100.0, scale: 2
         stock          min: 0, bindable: false     // le stock ne bouge que par procédure stockée
+        fournisseur    nullable: true
     }
 
     static mapping = {
