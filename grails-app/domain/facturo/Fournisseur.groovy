@@ -12,5 +12,10 @@ class Fournisseur {
 
     static hasMany = [produits: Produit]
 
+    static mapping = {
+        dateCreated column: 'date_creation'
+        sort 'raisonSociale'
+    }
+
 
 }
