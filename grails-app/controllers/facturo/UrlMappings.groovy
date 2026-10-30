@@ -10,6 +10,12 @@ class UrlMappings {
             constraints { id matches: /\d+/ }
         }
 
+        "/fournisseurs"(controller: 'fournisseur', action: 'recherche')
+        "/fournisseurs/$id"(controller: 'fournisseur', action: 'show') {
+            constraints { id matches: /\d+/ }
+        }
+
+
         // Règle par convention : /<contrôleur>/<action>/<id>
         "/$controller/$action?/$id?(.$format)?" {
             constraints {
@@ -19,5 +25,7 @@ class UrlMappings {
         "/"(controller: 'client', action: 'index')
         "500"(view: '/error')
         "404"(view: '/notFound')
+
+
     }
 }
