@@ -15,6 +15,7 @@
         <li class="nav-item"><g:link class="nav-link" controller="client">Clients</g:link></li>
         <li class="nav-item"><g:link class="nav-link" controller="produit">Produits</g:link></li>
         <li class="nav-item"><g:link class="nav-link" controller="facture" action="recherche">Factures</g:link></li>
+        <li class="nav-item"><g:link class="nav-link" controller="fournisseur">Fournisseur</g:link></li>
         <%-- Exercices : ajouter ici Fournisseurs (ex01), Commandes (ex03), Audit (ex07), Tableau de bord (ex08) --%>
         <g:pageProperty name="page.nav"/>
     </ul>
